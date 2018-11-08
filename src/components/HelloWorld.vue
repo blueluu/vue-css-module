@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 styleName="title border">{{ msg }}</h1>
+    <h1 class="font20">{{ msg }}</h1>
+    <h1 class="red font20">{{ msg }}</h1>
     <p>
       For guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -31,19 +33,24 @@
 </template>
 
 <script>
+import CSSModules from 'vue-css-modules'
+import global from '../style/custom/global.module.css'; 
+import local from '../style/custom/local.module.css';
+import border from '../style/custom/border.module.css';
+import index from '../style/index.module.css';
+
 export default {
+  mixins: [CSSModules(local)],
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  mounted() {
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
+<style module>
 ul {
   list-style-type: none;
   padding: 0;
@@ -56,3 +63,7 @@ a {
   color: #42b983;
 }
 </style>
+
+
+
+

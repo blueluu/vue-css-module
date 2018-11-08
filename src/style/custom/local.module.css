@@ -1,0 +1,11 @@
+.green {
+  color: #fafafa;
+}
+.title {
+  composes:green;
+  background-color: red;
+}
+.border {
+    border: 1px solid #ddd;
+    padding:20px;
+  }
