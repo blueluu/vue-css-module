@@ -34,10 +34,7 @@
 
 <script>
 import CSSModules from 'vue-css-modules'
-import global from '../style/custom/global.module.css'; 
 import local from '../style/custom/local.module.css';
-import border from '../style/custom/border.module.css';
-import index from '../style/index.module.css';
 
 export default {
   mixins: [CSSModules(local)],
